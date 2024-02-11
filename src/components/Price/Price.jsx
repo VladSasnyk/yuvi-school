@@ -32,8 +32,8 @@ const Price = () => {
 
 
 
-    return <section ref={ref} id='price' className="opacity-0">
-        <div className="wrapper h-screen gap-12">
+    return <section ref={ref} id='price' className="md:opacity-0">
+        <div className="wrapper h-auto gap-12">
             <Title id="priceTitle">ЦІНИ</Title>
             <div className="flex h-auto w-full">
                 <div className="w-full flex justify-center gap-6 max-[1100px]:flex-col">

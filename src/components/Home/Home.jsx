@@ -36,7 +36,7 @@ const Home = () => {
                 .fromTo('.buttonHome', { opacity: 0, x: '10vw' }, { opacity: 1, x: 0 }, '-=1')
                 .fromTo('#leftHomeDiv', { opacity: 0, x: '10vw' }, { opacity: 1, x: 0 }, '-=1')
 
-                // .fromTo('.left', { opacity: 0, y: 30 }, { opacity: 1, y: 0 }, '-=0.5')
+            // .fromTo('.left', { opacity: 0, y: 30 }, { opacity: 1, y: 0 }, '-=0.5')
         }
     }, [inView]);
 

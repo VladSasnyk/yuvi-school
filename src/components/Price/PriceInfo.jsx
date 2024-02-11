@@ -44,7 +44,7 @@ const PriceInfo = props => {
                             або ж оплата стягуватиметься, але всі матеріали вам будуть надані.
                         </p>
                     </div> */}
-                    <div className="text-xl flex flex-col gap-4">
+                    <div className="text-xl flex flex-col gap-4 max-sm:text-sm">
                         <p>
                             Перший урок оплачується окремо перед заняттям. Якщо вам сподобалось навчання, то надалі оплата відбувається пакетами.
 

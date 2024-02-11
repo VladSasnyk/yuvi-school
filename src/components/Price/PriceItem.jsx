@@ -12,7 +12,7 @@ const PriceItem = props => {
         bg-[#F1F1F0]">
             {/* <div className="priceItemImg  text-[500%] h-1/5 text-green-700/70">{props.image}</div> */}
             <h2 className="text-2xl font-bold">{props.title}</h2>
-            <ul className= 'max-sm:p-4 flex flex-col gap-4'>
+            <ul className='max-sm:p-4 flex flex-col gap-4'>
                 {props.children}
             </ul>
             {/* <div className="w-full w-100 h-auto flex justify-between rounded-t-xl text-xl max-[1300px]:text-lg max-sm:flex-col text-center">
