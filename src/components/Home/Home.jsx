@@ -7,7 +7,7 @@ import Button from "../UI/Button";
 import planet from '../../assets/planet.png'
 
 
-import { Link } from 'react-scroll';
+// import { Link } from 'react-scroll';
 import { useInView } from 'react-intersection-observer';
 
 
@@ -104,9 +104,11 @@ const Home = () => {
             </div>
 
             <p className="max-[376px]:text-xl text-2xl text-center">Вивчай англійську не залишаючи дім. Зручні уроки та цікаві завдання чекають на тебе</p> */}
-            <Link to='lessons' smooth={true} duration={1200}>
+            {/* <Link to='lessons' smooth={true} duration={1200}> */}
+            <a href='https://docs.google.com/forms/d/e/1FAIpQLScooAMec1PH5Mpy8JkcoEPXB9SdEEs1fwnjmxkZ36ln4l23YA/viewform' target='_blanc'>
                 <Button className='text-white max-sm:w-full w-2/3 max-sm:text-2xl text-3xl buttonHome'>Запис на безкоштовне пробне заняття</Button>
-            </Link>
+            </a>
+            {/* </Link> */}
             <img src={planet} className='max-md:hidden leftPlanet absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] w-[50%]'></img>
             <img src={planet} className='max-md:hidden rightPlanet absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] w-[50%]'></img>
         </div>
