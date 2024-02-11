@@ -48,15 +48,15 @@ const Home = () => {
             </h1>
             <div className='w-[50%] flex flex-col justfiy-center items-center gap-10 max-[1400px]:w-[70%] max-[1060px]:w-full'>
                 <div id='leftHomeDiv' className='flex text-2xl w-full gap-4 justify-end'>
-                    <p className='w-[50%] max-[1060px]:w-[70%] text-end leading-5 bg-[#F1F1F0] p-8 rounded-3xl'>Мрію вивчати англійську з
+                    <p className='w-[50%] max-[1060px]:w-[70%] text-end leading-5 bg-[#F1F1F0] p-8 rounded-3xl max-md:w-[80%] max-md:p-4'>Мрію вивчати англійську з
                         комфортом та бачити
                         результат...</p>
-                    <img src="/homeImg.png" alt="homeImg" className='w-[7%] h-1/2' />
+                    <img src="/homeImg.png" alt="homeImg" className='w-[7%] h-1/2 max-md:w-[20%] max-md:h-full' />
 
                 </div>
                 <div id='rightHomeDiv' className='flex text-2xl w-full justify-start gap-4 '>
-                    <img src="/homeImg2.png" alt="homeImg" className='w-[7%] h-1/2' />
-                    <p className='w-[70%] max-[1060px]:w-[90%] leading-5 text-start bg-[#F1F1F0] p-8 rounded-3xl'>
+                    <img src="/homeImg2.png" alt="homeImg" className='w-[7%] h-1/2 max-md:w-[20%]' />
+                    <p className='w-[70%] max-[1060px]:w-[80%] leading-5 text-start bg-[#F1F1F0] p-8 rounded-3xl max-md:p-4'>
                         <span className='text-[#3F7B5B]'>English Space</span> - твій ідеальний варіант.
                         Тут зручна платформа, захоплюючі
                         уроки, і головне - викладачі, які

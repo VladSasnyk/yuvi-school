@@ -19,7 +19,7 @@ const PriceItem = props => {
                 <p className="max-sm:w-full w-1/2 bg-green-700/70 p-4 text-white whitespace-nowrap ">Діти - {props.price1}</p>
                 <p className="max-sm:w-full w-1/2 bg-green-700/70 p-4 pl-0 text-white text-center whitespace-nowrap "> {props.price2} - Дорослі</p>
             </div> */}
-            <Button className='absolute bottom-10 right-10 text-2xl w-[50%] font-[600] text-white self-end'>{props.price}</Button>
+            <Button className='absolute bottom-10 right-10 text-2xl w-[50%] font-[600] text-white self-end max-md:w-[75%]'>{props.price}</Button>
         </div>
 
 
