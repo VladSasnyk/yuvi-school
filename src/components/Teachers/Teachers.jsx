@@ -74,10 +74,10 @@ const Teachers = () => {
         setReviews(false);
         gsap.to('#teachersInfo', { rotateY: 0 });
 
-        // const currentSlideIndex = swiperRef.current.swiper.realIndex;
+        const currentSlideIndex = swiperRef.current.swiper.realIndex;
         setTimeout(() => {
             swiperRef.current.swiper.update();
-            // swiperRef.current.swiper.slideTo(currentSlideIndex);
+            swiperRef.current.swiper.slideTo(currentSlideIndex);
         }, 0);
 
     };
@@ -103,12 +103,12 @@ const Teachers = () => {
             <div className='text-center flex gap-8 max-md:flex-col'>
                 <Button
                     onClick={() => filterHandler('children')}
-                    className={`text-xl ${filterTeachers === 'adults' ? 'bg-transparent text-gray-800 border-green-700 border-2' : 'text-white'}`} id='buttonFilterLeft'>
+                    className={`text-xl max-sm:text-lg ${filterTeachers === 'adults' ? 'bg-transparent text-gray-800 border-green-700 border-2' : 'text-white'}`} id='buttonFilterLeft'>
                     Викладачі для дітей 6-12 років
                 </Button>
                 <Button
                     onClick={() => filterHandler('adults')}
-                    className={`text-xl ${filterTeachers === 'children' ? 'bg-transparent text-gray-800 border-green-700 border-2' : 'text-white'}`} id='buttonFilterRight'>
+                    className={`text-xl max-sm:text-lg ${filterTeachers === 'children' ? 'bg-transparent text-gray-800 border-green-700 border-2' : 'text-white'}`} id='buttonFilterRight'>
                     Викладачі підлітків і дорослих
                 </Button>
             </div>

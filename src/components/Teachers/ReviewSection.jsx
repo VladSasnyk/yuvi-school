@@ -28,7 +28,7 @@ const ReviewSection = ({ reviews, openImage, changeHandler }) => {
           </div>
         ))}
       </div>
-      <Button onClick={changeHandler.bind(null, false)} className='text-white self-center max-md:w-full'>Повернутись</Button>
+      <Button onClick={changeHandler.bind(null, false)} className='text-white self-center max-md:w-full max-sm:text-base'>Повернутись</Button>
     </div>
   );
 };
