@@ -27,18 +27,32 @@ import 'swiper/css/pagination';
 
 const Price = () => {
     const [ref, inView] = useInView({
-        triggerOnce: true,
+        triggerOnce: false,
         threshold: 0.3,
     });
+
     useEffect(() => {
+        let animation;
+
         if (inView) {
-            gsap.to('#price', { opacity: 1, duration: 0.2 })
-            gsap.fromTo('#priceTitle', { y: '-150', opacity: 0 }, { y: 0, opacity: 1, duration: 2, ease: 'expo.inOut' })
+            gsap.to('#price', { opacity: 1, duration: 0.2 });
+            gsap.fromTo('#priceTitle', { y: '-150', opacity: 0 }, { y: 0, opacity: 1, duration: 2, ease: 'expo.inOut' });
             gsap.fromTo('.priceItem', { opacity: 0, scale: '0.1' }, { opacity: 1, duration: 1, scale: 1, stagger: 0.3 });
-            gsap.fromTo('#priceInfo', { y: 120 }, { y: 0, duration: 2 })
+            gsap.fromTo('#priceInfo', { y: 120 }, { y: 0, duration: 2 });
+        } else {
+            animation = gsap.timeline();
+            animation.to('#price', { opacity: 0, duration: 0.2 });
+            animation.to('#priceTitle', { y: '-150', opacity: 0, duration: 0.5 });
+            animation.to('.priceItem', { opacity: 0, scale: '0.1', duration: 0.5 }, '-=0.5');
+            animation.to('#priceInfo', { y: 120, duration: 0.5 }, '-=0.5');
         }
 
-    }, [inView])
+        return () => {
+            if (animation) {
+                animation.kill(); // Kill the animation when component unmounts or re-renders
+            }
+        };
+    }, [inView]);
 
 
 
@@ -48,17 +62,15 @@ const Price = () => {
             <Title id="priceTitle">ЦІНИ</Title>
             <Swiper
                 className="w-full h-full pb-10"
-                // install Swiper modules
                 modules={[Navigation, Pagination, A11y]}
                 spaceBetween={50}
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
-                // scrollbar={{ draggable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log('slide change')}
-                // autoHeight
-               
+                autoHeight
+
             >
                 <SwiperSlide>
                     <PriceItem title='ІНДИВІДУАЛЬНИЙ ФОРМАТ' price='350 ГРН/ГОД'>
@@ -124,7 +136,7 @@ const Price = () => {
                         допомагати одне одному в процесі вивчення.
                     </Li>
                 </PriceItem></SwiperSlide>
-                
+
             </Swiper>
 
             {/* <div className="flex h-auto w-full">
