@@ -14,23 +14,26 @@ const Home = () => {
 
     useEffect(() => {
         if (inView) {
-            const widthLeft = window.screen.width >= 1300 ? '15vw' : window.screen.width >= 1100 ? '10vw' : '7vw';
-            const widthRight = window.screen.width >= 1300 ? '85vw' : window.screen.width >= 1100 ? '90vw' : '92vw';
-            gsap.defaults({ duration: .8 });
-            const textAnim = gsap.timeline();
-            gsap.to('#home', { opacity: 1, duration: .1 })
-            textAnim.to('.leftPlanet, .rightPlanet', { scale: 0.2 })
-                .to('.leftPlanet', { left: widthLeft })
-                .fromTo('.rightPlanet', { left: "50vw" }, { left: widthRight }, '-=.8')
-                .to('.leftPlanet', { y: '-25vh' })
-                .to('.rightPlanet', { y: '25vh' }, '-=.8')
+            setTimeout(() => {
+                const widthLeft = window.screen.width >= 1300 ? '15vw' : window.screen.width >= 1100 ? '10vw' : '7vw';
+                const widthRight = window.screen.width >= 1300 ? '85vw' : window.screen.width >= 1100 ? '90vw' : '92vw';
+                gsap.defaults({ duration: .8 });
+                const textAnim = gsap.timeline();
+                gsap.to('#home', { opacity: 1, duration: .1 })
+                textAnim.to('.leftPlanet, .rightPlanet', { scale: 0.2 })
+                    .to('.leftPlanet', { left: widthLeft })
+                    .fromTo('.rightPlanet', { left: "50vw" }, { left: widthRight }, '-=.8')
+                    .to('.leftPlanet', { y: '-25vh' })
+                    .to('.rightPlanet', { y: '25vh' }, '-=.8')
 
-                .fromTo('#rightHomeDiv', { x: '-20vw', opacity: 0 }, { x: '0', opacity: 1 }, `${window.screen.width <= 860 ? '-=2.2' : '-=.8'}`)
-                .fromTo('.homeSection h1', { x: '-20vw', opacity: 0 }, { x: '0', opacity: 1 }, `${window.screen.width <= 860 ? '-=2.4' : '-=.8'}`)
-                .fromTo('.buttonHome', { opacity: 0, x: '20vw' }, { opacity: 1, x: 0 }, `${window.screen.width <= 860 ? '-=2.4' : '-=.8'}`)
-                .fromTo('#leftHomeDiv', { opacity: 0, x: '20vw' }, { opacity: 1, x: 0 }, `${window.screen.width <= 860 ? '-=2.4' : '-=.8'}`)
+                    .fromTo('#rightHomeDiv', { x: '-20vw', opacity: 0 }, { x: '0', opacity: 1 }, `${window.screen.width <= 860 ? '-=2.2' : '-=.8'}`)
+                    .fromTo('.homeSection h1', { x: '-20vw', opacity: 0 }, { x: '0', opacity: 1 }, `${window.screen.width <= 860 ? '-=2.4' : '-=.8'}`)
+                    .fromTo('.buttonHome', { opacity: 0, x: '20vw' }, { opacity: 1, x: 0 }, `${window.screen.width <= 860 ? '-=2.4' : '-=.8'}`)
+                    .fromTo('#leftHomeDiv', { opacity: 0, x: '20vw' }, { opacity: 1, x: 0 }, `${window.screen.width <= 860 ? '-=2.4' : '-=.8'}`)
+            }, 50)
+
         }
-        
+
 
     }, [inView]);
 
