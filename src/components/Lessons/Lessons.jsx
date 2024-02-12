@@ -12,18 +12,18 @@ const Lessons = () => {
 
     useEffect(() => {
         let animation;
-    
+
         if (inView) {
             gsap.to('#lessons', { opacity: 1, duration: .3 });
             gsap.fromTo('#lessonsTitle', { y: '-150', opacity: 0 }, { y: 0, opacity: 1, duration: 2, ease: 'expo.inOut' });
-            gsap.fromTo('#main-video', { scale: 0 }, { scale: 1 , duration: 1});
+            gsap.fromTo('#main-video', { opacity: 0 }, { opacity: 1, duration: 1 });
         } else {
             animation = gsap.timeline();
             animation.to('#lessons', { opacity: 0, duration: .3 });
             animation.to('#lessonsTitle', { y: '-150', opacity: 0, duration: 0.5 });
-            animation.to('#main-video', { scale: 0, duration: 0.5 }, '-=0.5');
+            animation.to('#main-video', { opacity: 0, duration: 0.5 }, '-=0.5');
         }
-    
+
         return () => {
             if (animation) {
                 animation.kill(); // Kill the animation when component unmounts or re-renders
