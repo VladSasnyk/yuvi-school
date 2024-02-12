@@ -6,18 +6,30 @@ import { useEffect } from 'react';
 
 const Lessons = () => {
     const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.5,
+        triggerOnce: false,
+        threshold: 0.3,
     });
 
     useEffect(() => {
+        let animation;
+    
         if (inView) {
-            gsap.to('#lessons', { opacity: 1, duration: .3 })
-            gsap.fromTo('#lessonsTitle', { y: '-150', opacity: 0 }, { y: 0, opacity: 1, duration: 2, ease: 'expo.inOut' })
-            gsap.fromTo('#main-video', { scale: 0 }, { scale: 1 , duration: 1})
-            
+            gsap.to('#lessons', { opacity: 1, duration: .3 });
+            gsap.fromTo('#lessonsTitle', { y: '-150', opacity: 0 }, { y: 0, opacity: 1, duration: 2, ease: 'expo.inOut' });
+            gsap.fromTo('#main-video', { scale: 0 }, { scale: 1 , duration: 1});
+        } else {
+            animation = gsap.timeline();
+            animation.to('#lessons', { opacity: 0, duration: .3 });
+            animation.to('#lessonsTitle', { y: '-150', opacity: 0, duration: 0.5 });
+            animation.to('#main-video', { scale: 0, duration: 0.5 }, '-=0.5');
         }
-    }, [inView])
+    
+        return () => {
+            if (animation) {
+                animation.kill(); // Kill the animation when component unmounts or re-renders
+            }
+        };
+    }, [inView]);
 
 
     return <section id='lessons' className='min-h-10 opacity-0' ref={ref}>

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import gsap from 'gsap';
 import Button from '../UI/Button';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-scroll';
 /* eslint-disable react/prop-types */
 
 
@@ -28,7 +29,13 @@ const ReviewSection = ({ reviews, openImage, changeHandler }) => {
           </div>
         ))}
       </div>
-      <Button onClick={changeHandler.bind(null, false)} className='text-white self-center max-md:w-full max-sm:text-base'>Повернутись</Button>
+      <Link
+        to='swiperSection'
+        spy={true}
+        smooth={true}>
+        <Button onClick={changeHandler.bind(null, false)} className='text-white self-center max-md:w-full max-sm:text-base'>Повернутись</Button>
+      </Link>
+
     </div>
   );
 };

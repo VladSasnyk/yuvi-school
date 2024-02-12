@@ -7,18 +7,38 @@ import gsap from 'gsap';
 
 const Questions = () => {
     const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.5,
+        triggerOnce: false,
+        threshold: 0.3,
     });
 
-    useEffect(() => {
-        if (inView) {
-            gsap.to('#questions', { opacity: 1, duration: .3 })
-            gsap.fromTo('#questionsTitle', { y: '-150', opacity: 0 }, { y: 0, opacity: 1, duration: 2, ease: 'expo.inOut' })
-            gsap.fromTo('.questionItem', { opacity: 0 }, { opacity: 1, duration: 1, stagger: .2 })
-        }
-    }, [inView])
+    // useEffect(() => {
+    //     if (inView) {
+    //         gsap.to('#questions', { opacity: 1, duration: .3 })
+    //         gsap.fromTo('#questionsTitle', { y: '-150', opacity: 0 }, { y: 0, opacity: 1, duration: 2, ease: 'expo.inOut' })
+    //         gsap.fromTo('.questionItem', { opacity: 0 }, { opacity: 1, duration: .7, stagger: .2 })
+    //     }
+    // }, [inView])
 
+    useEffect(() => {
+        let animation;
+
+        if (inView) {
+            gsap.to('#questions', { opacity: 1, duration: .3 });
+            gsap.fromTo('#questionsTitle', { y: '-150', opacity: 0 }, { y: 0, opacity: 1, duration: 2, ease: 'expo.inOut' });
+            gsap.fromTo('.questionItem', { opacity: 0 }, { opacity: 1, duration: .7, stagger: .2 });
+        } else {
+            animation = gsap.timeline();
+            animation.to('#questions', { opacity: 0, duration: .3 });
+            animation.to('#questionsTitle', { y: '-150', opacity: 0, duration: 0.5 });
+            animation.to('.questionItem', { opacity: 0, duration: 0.3, stagger: 0.1 }, '-=0.5');
+        }
+
+        return () => {
+            if (animation) {
+                animation.kill(); // Kill the animation when component unmounts or re-renders
+            }
+        };
+    }, [inView]);
 
     return (
         <section id='questions' className='min-h-10 opacity-0' ref={ref}>

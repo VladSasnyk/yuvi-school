@@ -13,7 +13,7 @@ import gsap from 'gsap';
 
 const Teachers = () => {
     const [ref, inView] = useInView({
-        triggerOnce: true,
+        triggerOnce: false,
         threshold: 0.3,
     });
 
@@ -24,13 +24,28 @@ const Teachers = () => {
     const [filterTeachers, setFilterTeachers] = useState('children');
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
+
     useEffect(() => {
+        let animation;
+
         if (inView) {
-            gsap.to('#teachers', { opacity: 1, duration: 0.2 })
+            gsap.to('#teachers', { opacity: 1, duration: 0.2 });
             gsap.fromTo('#teachersTitle', { y: '-150', opacity: 0 }, { y: 0, opacity: 1, duration: 1.5, ease: 'expo.inOut' });
             gsap.fromTo('#buttonFilterLeft', { opacity: 0, x: '-50vw' }, { opacity: 1, duration: 1.5, x: 0, ease: 'expo.inOut' });
             gsap.fromTo('#buttonFilterRight', { opacity: 0, x: '50vw' }, { opacity: 1, duration: 1.5, x: 0, ease: 'expo.inOut' });
+        } else {
+            animation = gsap.timeline();
+            animation.to('#teachers', { opacity: 0, duration: 0.2 });
+            animation.to('#teachersTitle', { y: '-150', opacity: 0, duration: 0.5 });
+            animation.to('#buttonFilterLeft', { opacity: 0, x: '-50vw', duration: 0.5 }, '-=0.5');
+            animation.to('#buttonFilterRight', { opacity: 0, x: '50vw', duration: 0.5 }, '-=0.5');
         }
+
+        return () => {
+            if (animation) {
+                animation.kill(); // Kill the animation when component unmounts or re-renders
+            }
+        };
     }, [inView]);
 
 
@@ -114,6 +129,7 @@ const Teachers = () => {
             </div>
             {data ? (
                 <Swiper
+                    id='swiperSection'
                     ref={swiperRef}
                     modules={[Navigation, Pagination, A11y]}
                     spaceBetween={50}

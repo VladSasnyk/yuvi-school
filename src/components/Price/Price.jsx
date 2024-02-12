@@ -21,10 +21,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-
-
-
-
 const Price = () => {
     const [ref, inView] = useInView({
         triggerOnce: false,
