@@ -30,13 +30,12 @@ const Home = () => {
                 .fromTo('.rightPlanet', { left: "50%" }, { left: widthRight }, '-=1')
                 .to('.leftPlanet', { y: '-25vh' })
                 .to('.rightPlanet', { y: '25vh' }, '-=1')
-                // .fromTo('.subTitleHome', { opacity: 0 }, { opacity: 1 }, '-=1.7')
-                .fromTo('#rightHomeDiv', { x: '-10vw', opacity: 0 }, { x: '0', opacity: 1 }, '-=0.8')
-                .fromTo('.homeSection h1', { x: '-10vw', opacity: 0 }, { x: '0', opacity: 1 }, '-=1')
-                .fromTo('.buttonHome', { opacity: 0, x: '10vw' }, { opacity: 1, x: 0 }, '-=1')
-                .fromTo('#leftHomeDiv', { opacity: 0, x: '10vw' }, { opacity: 1, x: 0 }, '-=1')
+                
+                .fromTo('#rightHomeDiv', { x: '-10vw', opacity: 0 }, { x: '0', opacity: 1 }, `${window.screen.width <= 860 ? '-=2.2' : '-=0.8'}`)
+                .fromTo('.homeSection h1', { x: '-10vw', opacity: 0 }, { x: '0', opacity: 1 }, `${window.screen.width <= 860 ? '-=2.4' : '-=1'}`)
+                .fromTo('.buttonHome', { opacity: 0, x: '10vw' }, { opacity: 1, x: 0 }, `${window.screen.width <= 860 ? '-=2.4' : '-=1'}`)
+                .fromTo('#leftHomeDiv', { opacity: 0, x: '10vw' }, { opacity: 1, x: 0 }, `${window.screen.width <= 860 ? '-=2.4' : '-=1'}`)
 
-            // .fromTo('.left', { opacity: 0, y: 30 }, { opacity: 1, y: 0 }, '-=0.5')
         }
     }, [inView]);
 
