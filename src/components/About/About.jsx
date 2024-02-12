@@ -15,29 +15,60 @@ import Title from "../UI/Title";
 
 const About = () => {
     const [ref, inView] = useInView({
-        triggerOnce: true,
+        triggerOnce: false,
         threshold: 0.3,
     });
 
+    // useEffect(() => {
+    //     if (inView) {
+    //         gsap.to('#about', { opacity: 1 })
+
+    //         gsap.fromTo('.aboutItems li', { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, ease: 'back.inOut', stagger: 0.3 });
+    //         gsap.from('#aboutTitle', { y: -150, duration: 1, opacity: 0, ease: 'power2.inOut' },)
+
+
+    //         const astronaut = gsap.timeline({ repeat: -1 });
+
+    //         if (window.screen.width >= 868) {
+    //             astronaut.fromTo('#astronaut', { y: '40vh', x: '-10vw' }, { y: '85vh', x: '40vw', duration: 8, rotate: '180deg' })
+    //                 .to('#astronaut', { y: '50vh', x: '95vw', duration: 8, rotate: '-180deg' }, '-=2')
+    //                 .to('#astronaut', { y: 0, x: '40vw', duration: 8, rotate: '180deg' }, '-=2')
+    //                 .to('#astronaut', { y: '40vh', x: '-10vw', duration: 8, rotate: '-180deg' }, '-=2');
+    //         }
+
+    //     }
+
+    // }, [inView]);
+
     useEffect(() => {
+        let animation;
+
         if (inView) {
             gsap.to('#about', { opacity: 1 })
 
             gsap.fromTo('.aboutItems li', { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1, ease: 'back.inOut', stagger: 0.3 });
-            gsap.from('#aboutTitle', { y: -150, duration: 1, opacity: 0, ease: 'power2.inOut' },)
-
-
-            const astronaut = gsap.timeline({ repeat: -1 });
+            gsap.fromTo('#aboutTitle', { y: -150, opacity: 0 }, { opacity: 1, y: 0, duration: 1, ease: 'power2.inOut' })
 
             if (window.screen.width >= 868) {
-                astronaut.fromTo('#astronaut', { y: '40vh', x: '-10vw' }, { y: '85vh', x: '40vw', duration: 8, rotate: '180deg' })
+                animation = gsap.timeline({ repeat: -1 });
+                animation.fromTo('#astronaut', { y: '40vh', x: '-10vw' }, { y: '85vh', x: '40vw', duration: 8, rotate: '180deg' })
                     .to('#astronaut', { y: '50vh', x: '95vw', duration: 8, rotate: '-180deg' }, '-=2')
                     .to('#astronaut', { y: 0, x: '40vw', duration: 8, rotate: '180deg' }, '-=2')
                     .to('#astronaut', { y: '40vh', x: '-10vw', duration: 8, rotate: '-180deg' }, '-=2');
             }
-
+        } else {
+            // Clear animations when out of view
+            gsap.to('#about', { opacity: 0 });
+            gsap.to('.aboutItems li', { opacity: 0, y: 100, duration: 1 });
+            gsap.to('#aboutTitle', { y: -150, duration: 1, opacity: 0 });
+            gsap.to('#astronaut', { clearProps: 'all' }); // Clear all properties and kill the animation
         }
 
+        return () => {
+            if (animation) {
+                animation.kill(); // Kill the animation when component unmounts or re-renders
+            }
+        };
     }, [inView]);
 
     return (
@@ -61,3 +92,4 @@ const About = () => {
 }
 
 export default About;
+
