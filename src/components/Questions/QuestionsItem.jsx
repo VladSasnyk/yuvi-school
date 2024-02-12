@@ -15,11 +15,11 @@ const QuestionsItem = ({ children, trigger }) => {
     };
 
     return (
-        <div className='questionItem w-full border-b-2 border-green-800 text-4xl max-md:text-2xl flex cursor-pointer justify-between pb-4' onClick={handleToggle}>
+        <div className='questionItem w-full border-b-2 border-green-800 text-4xl max-md:text-2xl flex cursor-pointer justify-between pb-4 max-sm:text-lg' onClick={handleToggle}>
             <Collapsible trigger={trigger} open={isOpen}>
-                <p className='text-xl py-4'>{children}</p>
+                <p className='text-xl py-4 max-sm:text-base'>{children}</p>
             </Collapsible>
-            <p className='text-[#3F7B5B] text-5xl hover:text-green-700/50 pl-4'>
+            <p className='text-[#3F7B5B] text-5xl hover:text-green-700/50 pl-4 max-sm:text-xl'>
                 {isOpen ? <FaMinusCircle /> : <FaCirclePlus />
                 }
             </p>
