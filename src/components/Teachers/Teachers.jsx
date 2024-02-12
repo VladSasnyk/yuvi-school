@@ -14,7 +14,7 @@ import gsap from 'gsap';
 const Teachers = () => {
     const [ref, inView] = useInView({
         triggerOnce: false,
-        threshold: 0.3,
+        threshold: .1,
     });
 
     const [data, setData] = useState(null);
