@@ -4,7 +4,7 @@
 //     bg-gradient-to-b from-green-700/80 via-slate-700/80 to-green-700/80
 const AboutCart = props => {
     return <div className={
-        `aboutCart text-3xl border-2 w-full rounded-3xl min-h-[35vh] relative
+        `aboutCart text-2xl border-2 w-full rounded-3xl min-h-[30vh] relative max-sm:min-h-[20vh] max-sm:text-xl
         flex items-center justify-center text-center p-4 cursor shadow-xl
         border-[#3F7B5B]
         `} >
