@@ -43,7 +43,7 @@ const Price = () => {
 
 
 
-    return <section ref={ref} id='price' className="md:opacity-0">
+    return <section ref={ref} id='price' className="opacity-0">
         <div className="wrapper h-auto gap-12 max-sm:w-screen">
             <Title id="priceTitle">ЦІНИ</Title>
             <Swiper
@@ -57,7 +57,7 @@ const Price = () => {
                 // scrollbar={{ draggable: true }}
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log('slide change')}
-                autoHeight
+                // autoHeight
                
             >
                 <SwiperSlide>
