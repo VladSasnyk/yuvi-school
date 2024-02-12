@@ -1,13 +1,7 @@
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import Button from "../UI/Button";
-
-//img
-// import border from '../../assets/border.png'
 import planet from '../../assets/planet.png'
-
-
-// import { Link } from 'react-scroll';
 import { useInView } from 'react-intersection-observer';
 
 
@@ -17,25 +11,28 @@ const Home = () => {
         threshold: 0.5,
     });
 
+    const animationHandler = () => {
+        const widthLeft = window.screen.width >= 1300 ? '15%' : window.screen.width >= 1100 ? '10%' : '7%';
+        const widthRight = window.screen.width >= 1300 ? '85%' : window.screen.width >= 1100 ? '90%' : '92%';
+        gsap.defaults({ duration: .8 });
+        const textAnim = gsap.timeline();
+        gsap.to('#home', { opacity: 1, duration: .1 })
+        textAnim.to('.leftPlanet, .rightPlanet', { scale: 0.2 })
+            .to('.leftPlanet', { left: widthLeft })
+            .fromTo('.rightPlanet', { left: "50%" }, { left: widthRight }, '-=.8')
+            .to('.leftPlanet', { y: '-25vh' })
+            .to('.rightPlanet', { y: '25vh' }, '-=.8')
+
+            .fromTo('#rightHomeDiv', { x: '-20vw', opacity: 0 }, { x: '0', opacity: 1 }, `${window.screen.width <= 860 ? '-=2.2' : '-=.8'}`)
+            .fromTo('.homeSection h1', { x: '-20vw', opacity: 0 }, { x: '0', opacity: 1 }, `${window.screen.width <= 860 ? '-=2.4' : '-=.8'}`)
+            .fromTo('.buttonHome', { opacity: 0, x: '20vw' }, { opacity: 1, x: 0 }, `${window.screen.width <= 860 ? '-=2.4' : '-=.8'}`)
+            .fromTo('#leftHomeDiv', { opacity: 0, x: '20vw' }, { opacity: 1, x: 0 }, `${window.screen.width <= 860 ? '-=2.4' : '-=.8'}`)
+    }
+
     //animations
     useEffect(() => {
         if (inView) {
-            const widthLeft = window.screen.width >= 1300 ? '15%' : window.screen.width >= 1100 ? '10%' : '7%';
-            const widthRight = window.screen.width >= 1300 ? '85%' : window.screen.width >= 1100 ? '90%' : '92%';
-            gsap.defaults({ duration: 1 });
-            const textAnim = gsap.timeline();
-            gsap.to('#home', { opacity: 1, duration: .1 })
-            textAnim.to('.leftPlanet, .rightPlanet', { scale: 0.2 })
-                .to('.leftPlanet', { left: widthLeft })
-                .fromTo('.rightPlanet', { left: "50%" }, { left: widthRight }, '-=1')
-                .to('.leftPlanet', { y: '-25vh' })
-                .to('.rightPlanet', { y: '25vh' }, '-=1')
-                
-                .fromTo('#rightHomeDiv', { x: '-10vw', opacity: 0 }, { x: '0', opacity: 1 }, `${window.screen.width <= 860 ? '-=2.2' : '-=0.8'}`)
-                .fromTo('.homeSection h1', { x: '-10vw', opacity: 0 }, { x: '0', opacity: 1 }, `${window.screen.width <= 860 ? '-=2.4' : '-=1'}`)
-                .fromTo('.buttonHome', { opacity: 0, x: '10vw' }, { opacity: 1, x: 0 }, `${window.screen.width <= 860 ? '-=2.4' : '-=1'}`)
-                .fromTo('#leftHomeDiv', { opacity: 0, x: '10vw' }, { opacity: 1, x: 0 }, `${window.screen.width <= 860 ? '-=2.4' : '-=1'}`)
-
+            animationHandler();
         }
     }, [inView]);
 
@@ -64,13 +61,16 @@ const Home = () => {
                 </div>
             </div>
 
-
             <a href='https://docs.google.com/forms/d/e/1FAIpQLScooAMec1PH5Mpy8JkcoEPXB9SdEEs1fwnjmxkZ36ln4l23YA/viewform' target='_blanc'>
                 <Button className='text-white max-sm:w-full w-2/3 max-sm:text-base text-xl buttonHome'>ЗАПИС НА БЕЗКОШТОВНЕ ПРОБНЕ ЗАНЯТТЯ</Button>
             </a>
-            {/* </Link> */}
-            <img src={planet} className='max-md:hidden leftPlanet absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] w-[40%]'></img>
-            <img src={planet} className='max-md:hidden rightPlanet absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] w-[40%]'></img>
+            {window.screen.width > 860 && (
+                <>
+                    <img src={planet} className='max-md:hidden leftPlanet absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] w-[40%]'></img>
+                    <img src={planet} className='max-md:hidden rightPlanet absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] w-[40%]'></img>
+                </>
+            )}
+
         </div>
     </section>
 }
