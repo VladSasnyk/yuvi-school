@@ -3,10 +3,7 @@ import AboutCart from "./AboutCart";
 import gsap from "gsap";
 import { useInView } from 'react-intersection-observer';
 
-
-// icons for bg
 import { PiStudentFill } from "react-icons/pi";
-// import { GiTeacher } from "react-icons/gi";
 import { GiProgression } from "react-icons/gi";
 import { TfiThought } from "react-icons/tfi";
 import { RiSpeakFill } from "react-icons/ri";
@@ -21,8 +18,6 @@ const About = () => {
         triggerOnce: true,
         threshold: 0.3,
     });
-
-    /* Shine */
 
     useEffect(() => {
         if (inView) {
@@ -46,14 +41,12 @@ const About = () => {
     }, [inView]);
 
     return (
-        // style={{backgroundImage:`url(${bg})`}}
         <section ref={ref} id='about' className="h-auto bg-cover relative opacity-0" >
             <div className="wrapper gap-14">
                 <Title id='aboutTitle'>ДЕТАЛЬНІШЕ ПРО НАС</Title>
                 <ul className="aboutItems flex flex-col gap-12">
                     <div className="grid grid-cols-2 gap-12 max-md:grid-cols-1 w-[80%] max-md:w-full m-auto">
                         <li key='cart1'><AboutCart back={<PiStudentFill />}>100+ учнів довірились нам</AboutCart></li>
-                        {/* <li key='cart2'><AboutCart back={<GiTeacher />}>8 сучасних викладачів</AboutCart></li> */}
                         <li key='cart3'><AboutCart back={<GiProgression />}>Уже за 2 місяці учні відчувають значний прогрес!</AboutCart></li>
                     </div>
                     <div className="grid grid-cols-2 gap-12 max-md:grid-cols-1 w-[80%] max-md:w-full m-auto">

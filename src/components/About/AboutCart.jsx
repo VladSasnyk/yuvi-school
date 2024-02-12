@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
 
-// bg-gradient-to-tl from-sky-900/50 via-green-600/80 to-stone-600/50
-//     bg-gradient-to-b from-green-700/80 via-slate-700/80 to-green-700/80
 const AboutCart = props => {
     return <div className={
         `aboutCart text-2xl border-2 w-full rounded-3xl min-h-[30vh] relative max-sm:min-h-[20vh] max-sm:text-xl
