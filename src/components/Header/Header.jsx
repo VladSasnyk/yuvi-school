@@ -35,7 +35,7 @@ const Header = () => {
       <Nav />
       <a href='https://docs.google.com/forms/d/e/1FAIpQLScooAMec1PH5Mpy8JkcoEPXB9SdEEs1fwnjmxkZ36ln4l23YA/viewform' target='_blanc'>
         <Button
-          className='text-white w-1/7 text-base max-sm:text-sm max-[281px]:text-xs max-[281px]:p-2 '
+          className='text-white w-1/7 text-base max-sm:text-xs max-[281px]:text-xs max-[281px]:p-2 '
         >
           ЗАПИС НА НАВЧАННЯ
         </Button>
