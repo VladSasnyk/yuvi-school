@@ -21,7 +21,7 @@ const PriceInfo = props => {
     return (
         <div className="flex flex-col items-center justify-center gap-16 mt-10" id={props.id}>
             <Button onClick={openModal}>
-                <h2 className="text-white text-4xl text-center cursor-pointer">
+                <h2 className="text-white text-4xl text-center cursor-pointer max-sm:text-lg">
                     Як відбувається оплата?
                 </h2>
             </Button>
