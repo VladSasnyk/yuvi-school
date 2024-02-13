@@ -65,7 +65,7 @@ const About = () => {
                     </div>
                 </ul>
             </div>
-            <img src={astronaut} className="absolute z-[-1] top-0 left-0 w-[7vw] max-md:hidden" id='astronaut'></img>
+            <img src={astronaut} className="absolute z-[-1] top-0 left-0 w-[7vw] max-md:hidden" id='astronaut' alt='astronaut-image'></img>
         </section>
     );
 }

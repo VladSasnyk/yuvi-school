@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-scroll";
 
-const NavItem = ({ to, onClick, children }) => {
+const NavItem = ({ to, onClick, children ,href}) => {
     return (
         <li className="cursor-pointer ">
             <Link
                 activeClass="active"
                 to={to}
+                href={href}
                 spy={true}
                 smooth={true}
                 duration={1200}
