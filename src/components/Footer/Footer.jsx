@@ -6,7 +6,7 @@ import { FaViber } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="w-full bg-green-700/50 mt-[10%] flex items-center justify-around text-white text-xl max-md:flex-col max-sm:text-lg">
+        <footer className="w-full bg-green-700/50 mt-[10%] flex items-center justify-around text-xl max-md:flex-col max-sm:text-lg">
             <div className='py-20 text-center max-sm:py-10'>
                 <Link className="cursor-pointer text-center"
                     to='home'
@@ -19,7 +19,7 @@ const Footer = () => {
                
             </div>
             <div className='flex flex-col'>
-                <nav className='flex gap-6 border-b-2 border-white pb-6 mb-6 max-md:flex-col text-center'>
+                <nav className='flex gap-6 border-b-2 border-black pb-6 mb-6 max-md:flex-col text-center'>
                     <Link className="cursor-pointer"
                         to='about'
                         href='#about'
