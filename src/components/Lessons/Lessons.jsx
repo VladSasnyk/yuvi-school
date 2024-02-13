@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 const Lessons = () => {
     const [ref, inView] = useInView({
         triggerOnce: false,
-        threshold: 0.3,
+        threshold: 0.5,
     });
 
     useEffect(() => {
@@ -32,7 +32,7 @@ const Lessons = () => {
     }, [inView]);
 
 
-    return <section id='lessons' className='min-h-10 opacity-0' ref={ref}>
+    return <section id='lessons' className='min-h-[60vh] opacity-0' ref={ref}>
         <div className='wrapper'>
             <Title id='lessonsTitle'>ЗАНЯТТЯ</Title>
             <div className='w-full flex items-center justify-center py-14'>
