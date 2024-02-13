@@ -7,7 +7,7 @@ import { PiStudentFill } from "react-icons/pi";
 import { GiProgression } from "react-icons/gi";
 import { TfiThought } from "react-icons/tfi";
 import { RiSpeakFill } from "react-icons/ri";
-import astronaut from '../../assets/cosmonavt.png'
+import astronaut from '../../assets/cosmonavt.webp'
 import Title from "../UI/Title";
 
 

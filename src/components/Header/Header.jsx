@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo.webp';
 import Button from '../UI/Button';
 import Nav from './Nav';
 import { Link } from 'react-scroll';

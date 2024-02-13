@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import Button from "../UI/Button";
-import planet from '../../assets/planet.png'
+import planet from '../../assets/planet.webp'
 import { useInView } from 'react-intersection-observer';
 
 
@@ -58,11 +58,11 @@ const Home = () => {
                     <p className='w-[50%] max-[1060px]:w-[70%] text-end leading-5 bg-[#F1F1F0] p-8 rounded-3xl max-md:w-[80%] max-md:p-4'>Мрію вивчати англійську з
                         комфортом та бачити
                         результат...</p>
-                    <img src="/homeImg.png" alt="homeImg" className='w-[7%] h-1/2 max-md:w-[20%] max-md:h-full' />
+                    <img src="/homeImg.webp" alt="homeImg" className='w-[7%] h-1/2 max-md:w-[20%] max-md:h-full' />
 
                 </div>
                 <div id='rightHomeDiv' className='flex text-xl w-full justify-start gap-4 max-sm:text-base'>
-                    <img src="/homeImg2.png" alt="homeImg" className='w-[7%] h-1/2 max-md:w-[20%]' />
+                    <img src="/homeImg2.webp" alt="homeImg" className='w-[7%] h-1/2 max-md:w-[20%]' />
                     <p className='w-[70%] max-[1060px]:w-[80%] leading-5 text-start bg-[#F1F1F0] p-8 rounded-3xl max-md:p-4'>
                         <span className='text-[#3F7B5B] font-bold'>English Space</span> - твій ідеальний варіант.
                         Тут зручна платформа, захоплюючі

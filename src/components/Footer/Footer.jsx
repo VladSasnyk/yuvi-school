@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll';
-import planet from '../../assets/logo.png';
+import planet from '../../assets/logo.webp';
 import { BsInstagram } from "react-icons/bs";
 import { BsTelegram } from "react-icons/bs";
 import { FaViber } from "react-icons/fa";
