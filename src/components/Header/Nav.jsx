@@ -31,12 +31,11 @@ const Nav = () => {
     <>
       {/* Desktop */}
       <nav
-        className={`max-[900px]:text-sm max-md:text-3xl max-lg:absolute max-lg:top-20 max-lg:z-10 max-lg:pt-10 max-lg:w-full max-lg:text-center max-lg:h-auto 
-    max-lg:bg-gray-200 max-lg:pb-10 max-lg:z-50 max-lg:transition transition-transform transform ${isOpen ? 'max-lg:translate-x-0' : 'max-lg:-translate-x-full'
+        className={`max-lg:absolute max-lg:top-20  max-lg:pt-10 max-lg:w-full max-lg:text-center max-lg:h-auto
+    max-lg:bg-transparent max-lg:backdrop-blur-xl max-lg:pb-10 max-lg:z-50 max-lg:transition transition-transform transform ${isOpen ? 'max-lg:translate-x-0' : 'max-lg:-translate-x-full'
           }`}
       >
-        <ul className="navItems flex gap-10 max-lg:flex-col max-lg:gap-5 max-xl:gap-1 ">
-          {/* className={activeSectionIndex === 1 ? active : ''} */}
+        <ul className="navItems flex gap-10 max-lg:flex-col max-lg:gap-10 max-xl:gap-1 ">
           <NavItem to="about" onClick={toggleMobileMenu}>
             ПРО ШКОЛУ
           </NavItem>
