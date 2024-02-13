@@ -64,7 +64,7 @@ const Home = () => {
                 <div id='rightHomeDiv' className='flex text-xl w-full justify-start gap-4 max-sm:text-base'>
                     <img src="/homeImg2.png" alt="homeImg" className='w-[7%] h-1/2 max-md:w-[20%]' />
                     <p className='w-[70%] max-[1060px]:w-[80%] leading-5 text-start bg-[#F1F1F0] p-8 rounded-3xl max-md:p-4'>
-                        <span className='text-[#3F7B5B]'>English Space</span> - твій ідеальний варіант.
+                        <span className='text-[#3F7B5B] font-bold'>English Space</span> - твій ідеальний варіант.
                         Тут зручна платформа, захоплюючі
                         уроки, і головне - викладачі, які
                         завжди підтримують і враховують всі

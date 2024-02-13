@@ -62,7 +62,7 @@ const Footer = () => {
                     </Link>
                 </nav>
                 <div className='flex text-5xl cursor-pointer gap-6 w-full items-center justify-center pb-6 max-sm:text-3xl'>
-                    <a href='https://www.instagram.com/eng.space_' target='_blanc'><BsInstagram /></a>
+                    <a href='https://www.instagram.com/eng.space_' target='_blanc' aria-label='Instagram'><BsInstagram/></a>
                     <BsTelegram />
                     <FaViber />
                 </div>

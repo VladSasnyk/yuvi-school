@@ -52,7 +52,7 @@ const About = () => {
 
     return (
         <section ref={ref} id='about' className="h-auto bg-cover relative opacity-0" >
-            <div className="wrapper gap-14">
+            {/* <div className="wrapper gap-14">
                 <Title id='aboutTitle'>ДЕТАЛЬНІШЕ ПРО НАС</Title>
                 <ul className="aboutItems flex flex-col gap-12">
                     <div className="grid grid-cols-2 gap-12 max-md:grid-cols-1 w-[80%] max-md:w-full m-auto">
@@ -63,6 +63,18 @@ const About = () => {
                         <li key='cart4'><AboutCart back={<TfiThought />}>У нас найцікавіші та найактуальніші матеріали для дорослих і дітей!</AboutCart></li>
                         <li key='cart5'><AboutCart back={<RiSpeakFill />}>Безкоштовні Speaking Clubs для наших учнів</AboutCart></li>
                     </div>
+                </ul>
+            </div> */}
+            <div className="wrapper gap-14">
+                <Title id='aboutTitle'>ДЕТАЛЬНІШЕ ПРО НАС</Title>
+                <ul className="aboutItems grid grid-cols-2 gap-12 max-md:grid-cols-1 w-[80%] max-md:w-full m-auto">
+
+                    <li key='cart1'><AboutCart back={<PiStudentFill />}>100+ учнів довірились нам</AboutCart></li>
+                    <li key='cart3'><AboutCart back={<GiProgression />}>Уже за 2 місяці учні відчувають значний прогрес!</AboutCart></li>
+
+                    <li key='cart4'><AboutCart back={<TfiThought />}>У нас найцікавіші та найактуальніші матеріали для дорослих і дітей!</AboutCart></li>
+                    <li key='cart5'><AboutCart back={<RiSpeakFill />}>Безкоштовні Speaking Clubs для наших учнів</AboutCart></li>
+
                 </ul>
             </div>
             <img src={astronaut} className="absolute z-[-1] top-0 left-0 w-[7vw] max-md:hidden" id='astronaut' alt='astronaut-image'></img>
