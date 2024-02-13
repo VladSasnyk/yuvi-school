@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <header className={`flex justify-around h-20 items-center shadow-md font-semibold mb-4 text-base w-full top-0 left-0 z-10 background fixed transition-transform duration-500 ease-in-out ${visible ? 'transform translate-y-0' : 'transform -translate-y-20'}`}>
-      <Link to='home' smooth={true} duration={1200}>
+      <Link to='home' smooth={true} duration={1200} href='#home'>
         <img
           src={logo}
           alt="logoHeader"

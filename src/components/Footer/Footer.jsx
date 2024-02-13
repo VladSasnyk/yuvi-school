@@ -10,6 +10,7 @@ const Footer = () => {
             <div className='py-20 text-center max-sm:py-10'>
                 <Link className="cursor-pointer text-center"
                     to='home'
+                    href='#home'
                     spy={true}
                     smooth={true}
                     duration={1200}>
@@ -21,6 +22,7 @@ const Footer = () => {
                 <nav className='flex gap-6 border-b-2 border-white pb-6 mb-6 max-md:flex-col text-center'>
                     <Link className="cursor-pointer"
                         to='about'
+                        href='#about'
                         spy={true}
                         smooth={true}
                         duration={1200}>
@@ -28,6 +30,7 @@ const Footer = () => {
                     </Link>
                     <Link className="cursor-pointer"
                         to='price'
+                        href="#price"
                         spy={true}
                         smooth={true}
                         duration={1200}>
@@ -35,6 +38,7 @@ const Footer = () => {
                     </Link>
                     <Link className="cursor-pointer"
                         to='teachers'
+                        href="teachers"
                         spy={true}
                         smooth={true}
                         duration={1200}>
@@ -42,6 +46,7 @@ const Footer = () => {
                     </Link>
                     <Link className="cursor-pointer"
                         to='lessons'
+                        href="#lessons"
                         spy={true}
                         smooth={true}
                         duration={1200}>
@@ -49,6 +54,7 @@ const Footer = () => {
                     </Link>
                     <Link className="cursor-pointer"
                         to='questions'
+                        href="#questions"
                         spy={true}
                         smooth={true}
                         duration={1200}>

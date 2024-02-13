@@ -36,19 +36,19 @@ const Nav = () => {
           }`}
       >
         <ul className="navItems flex gap-10 max-lg:flex-col max-lg:gap-10 max-xl:gap-1 ">
-          <NavItem to="about" onClick={toggleMobileMenu} href='about'>
+          <NavItem to="about" onClick={toggleMobileMenu} href='#about'>
             ПРО ШКОЛУ
           </NavItem>
-          <NavItem to="price" onClick={toggleMobileMenu} href='price'>
+          <NavItem to="price" onClick={toggleMobileMenu} href='#price'>
             ЦІНИ
           </NavItem>
-          <NavItem to="teachers" onClick={toggleMobileMenu} href='teachers'>
+          <NavItem to="teachers" onClick={toggleMobileMenu} href='#teachers'>
             ВИКЛАДАЧІ
           </NavItem>
-          <NavItem to="lessons" onClick={toggleMobileMenu} href='lessons'>
+          <NavItem to="lessons" onClick={toggleMobileMenu} href='#lessons'>
             НАВЧАННЯ
           </NavItem>
-          <NavItem to="questions" onClick={toggleMobileMenu} href='questions'>
+          <NavItem to="questions" onClick={toggleMobileMenu} href='#questions'>
             ПИТАННЯ
           </NavItem>
         </ul>
