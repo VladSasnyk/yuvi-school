@@ -21,7 +21,7 @@ const Teachers = () => {
     const [isReviews, setReviews] = useState(false);
     const swiperRef = useRef(null);
     const [selectedImage, setSelectedImage] = useState(null);
-    const [filterTeachers, setFilterTeachers] = useState('children');
+    const [filterTeachers, setFilterTeachers] = useState('adults');
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
 
