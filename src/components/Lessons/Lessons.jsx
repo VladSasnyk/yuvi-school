@@ -40,7 +40,7 @@ const Lessons = () => {
                     <div className='w-1/2 max-md:w-full h-full m-auto'>
                         <Video
                             id='main-video'
-                            src='/main-video.mp4'
+                            src='/main-video'
                             className='w-full'
                         />
                     </div>
