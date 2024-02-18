@@ -30,7 +30,7 @@ const ReviewSection = ({ reviews, openImage, changeHandler }) => {
         ))}
       </div>
       <Link
-        to='swiperSection'
+        to={`${window.screen.width <= 820 ? 'swiperSection' : 'teachersButtons'}`}
         spy={true}
         smooth={true}>
         <Button onClick={changeHandler.bind(null, false)} className='text-white self-center max-md:w-full max-sm:text-base'>ПОВЕРНУТИСЬ</Button>

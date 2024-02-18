@@ -75,7 +75,6 @@ const Teachers = () => {
 
     const changeHandler = (active) => {
         active ? openReviews() : closeReviews();
-       
         !active
             ? gsap.to('#teachersInfo', { rotateY: 0, translateZ: 0, duration: 1 })
             : gsap.fromTo('#teachersInfo', { rotateY: 0, translateZ: 0 }, { rotateY: 180, translateZ: 0, duration: 1 });
@@ -115,7 +114,7 @@ const Teachers = () => {
     return (
         <section id='teachers' className='opacity-0 flex-col gap-14 h-auto pt-10' ref={ref}>
             <Title id='teachersTitle'>ВИКЛАДАЧІ</Title>
-            <div className='text-center flex gap-8 max-md:flex-col'>
+            <div className='text-center flex gap-8 max-md:flex-col' id='teachersButtons'>
                 <Button
                     onClick={() => filterHandler('children')}
                     className={`text-xl max-sm:text-lg ${filterTeachers === 'adults' ? 'bg-transparent text-gray-800 border-green-700 border-2' : 'text-white'}`} id='buttonFilterLeft'>
