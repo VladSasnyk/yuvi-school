@@ -3,7 +3,7 @@ import Button from '../UI/Button';
 
 
 
-const InfoSection = ({ experience, students, level, about, free, changeHandler, name }) => {
+const InfoSection = ({ experience, students, level, about, changeHandler, name }) => {
 
 
 
@@ -15,10 +15,6 @@ const InfoSection = ({ experience, students, level, about, free, changeHandler, 
       {students && <p><span className='font-bold text-lg'>Учні:</span> {students} </p>}
       {level && <p><span className='font-bold text-lg'>Рівень англійської:</span> {level}</p>}
       {about && <p><span className='font-bold text-lg'>Про мене:</span> {about}</p>}
-      <article>
-        <h3><span className='font-bold text-lg'>Вільні години:</span></h3>
-        <p>{free}</p>
-      </article>
       <Button className='text-white w-1/3 max-md:w-full max-sm:text-sm' onClick={changeHandler.bind(null, true)}>ВІДГУКИ</Button>
 
 

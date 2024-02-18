@@ -23,7 +23,7 @@ const Home = () => {
                 if (window.screen.width > 860) {
                     textAnim.to('.leftPlanet, .rightPlanet', { scale: 0.2 })
                         .to('.leftPlanet', { left: widthLeft })
-                        .fromTo('.rightPlanet', { left: "50vw" }, { left: widthRight }, '-=.8')
+                        .fromTo('.rightPlanet', { left: "50%" }, { left: widthRight }, '-=.8')
                         .to('.leftPlanet', { y: '-25vh' })
                         .to('.rightPlanet', { y: '25vh' }, '-=.8')
                         .fromTo('#rightHomeDiv', { x: '-20vw', opacity: 0 }, { x: '0', opacity: 1 }, '-=.8')

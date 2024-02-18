@@ -5,7 +5,7 @@ import InfoSection from "./InfoSection";
 // import { useEffect } from "react";
 
 
-const TeacherCard = ({ photo, name, experience, level, students, about, free, reviews, isReviews, openImage, changeHandler, isCurrentSlide }) => {
+const TeacherCard = ({ photo, name, experience, level, students, about, reviews, isReviews, openImage, changeHandler, isCurrentSlide }) => {
 
     return (
         <div className={`flex items-center justify-center gap-8 max-md:flex-col max-md:w-full h-auto`} id="teacherCard">
@@ -28,8 +28,7 @@ const TeacherCard = ({ photo, name, experience, level, students, about, free, re
                             experience={experience}
                             students={students}
                             level={level}
-                            about={about}
-                            free={free}
+                            about={about} 
                             changeHandler={changeHandler}
                         />
                     )

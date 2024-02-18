@@ -43,7 +43,7 @@ const Teachers = () => {
 
         return () => {
             if (animation) {
-                animation.kill(); // Kill the animation when component unmounts or re-renders
+                animation.kill();
             }
         };
     }, [inView]);
@@ -75,7 +75,7 @@ const Teachers = () => {
 
     const changeHandler = (active) => {
         active ? openReviews() : closeReviews();
-        // !active ? gsap.to('#teachersInfo', { rotateY: 0, duration: 1 }) : gsap.fromTo('#teachersInfo', { rotateY: 0 }, { rotateY: 180, duration: 1 })
+       
         !active
             ? gsap.to('#teachersInfo', { rotateY: 0, translateZ: 0, duration: 1 })
             : gsap.fromTo('#teachersInfo', { rotateY: 0, translateZ: 0 }, { rotateY: 180, translateZ: 0, duration: 1 });

@@ -20,7 +20,7 @@ const ReviewSection = ({ reviews, openImage, changeHandler }) => {
   }, [inView])
 
   return (
-    <div className='shadow-lg p-10 flex flex-col gap-6' id="reviewSection" ref={ref}>
+    <div className='shadow-lg p-10 flex flex-col gap-6 text-center' id="reviewSection" ref={ref}>
       <h2 className='w-full bg-[#3F7B5B] text-white text-4xl text-center p-2'>Відгуки</h2>
       <div className='grid grid-cols-2 gap-4 max-md:grid-cols-1 text-center'>
         {reviews.map((el, i) => (
@@ -33,7 +33,7 @@ const ReviewSection = ({ reviews, openImage, changeHandler }) => {
         to='swiperSection'
         spy={true}
         smooth={true}>
-        <Button onClick={changeHandler.bind(null, false)} className='text-white self-center max-md:w-full max-sm:text-base'>Повернутись</Button>
+        <Button onClick={changeHandler.bind(null, false)} className='text-white self-center max-md:w-full max-sm:text-base'>ПОВЕРНУТИСЬ</Button>
       </Link>
 
     </div>
