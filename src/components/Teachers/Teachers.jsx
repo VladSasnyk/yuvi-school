@@ -156,7 +156,7 @@ const Teachers = () => {
                 <p>Завантаження</p>
             )}
             <a href='https://www.canva.com/design/DAF9U9wkJS4/9f4E620yZL896dmZK0WsUg/view' target='_blanc'>
-                <Button className='text-white text-xl'>Вільні години</Button>
+                <Button className='text-white text-xl absolute z-10 left-[40vw] min-w-[20vw] max-md:min-w-[60vw] max-md:left-[20vw]'>Вільні години</Button>
             </a>
             {selectedImage && (
                 <ImageViewer imageUrl={selectedImage} onClose={closeImage} />
