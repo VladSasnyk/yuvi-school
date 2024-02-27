@@ -15,7 +15,7 @@ const InfoSection = ({ experience, students, level, about, changeHandler, name }
       {students && <p><span className='font-bold text-lg'>Учні:</span> {students} </p>}
       {level && <p><span className='font-bold text-lg'>Рівень англійської:</span> {level}</p>}
       {about && <p><span className='font-bold text-lg'>Про мене:</span> {about}</p>}
-      <Button className='text-white w-1/3 max-md:w-1/2 max-sm:w-2/3 max-sm:text-sm' onClick={changeHandler.bind(null, true)}>ВІДГУКИ</Button>
+      <Button className='text-white w-1/3 max-md:w-1/2 max-sm:w-2/3 max-sm:text-sm py-2' onClick={changeHandler.bind(null, true)}>ВІДГУКИ</Button>
 
 
     </div>

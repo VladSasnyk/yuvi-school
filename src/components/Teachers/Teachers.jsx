@@ -117,12 +117,12 @@ const Teachers = () => {
             <div className='text-center flex gap-8 max-md:flex-col' id='teachersButtons'>
                 <Button
                     onClick={() => filterHandler('children')}
-                    className={`text-xl max-sm:text-lg ${filterTeachers === 'adults' ? 'bg-transparent text-gray-800 border-green-700 border-2' : 'text-white'}`} id='buttonFilterLeft'>
+                    className={`py-3 text-xl max-sm:text-lg ${filterTeachers === 'adults' ? 'bg-transparent text-gray-800 border-green-700 border-2' : 'text-white'}`} id='buttonFilterLeft'>
                     Викладачі для дітей 6-12 років
                 </Button>
                 <Button
                     onClick={() => filterHandler('adults')}
-                    className={`text-xl max-sm:text-lg ${filterTeachers === 'children' ? 'bg-transparent text-gray-800 border-green-700 border-2' : 'text-white'}`} id='buttonFilterRight'>
+                    className={`py-3 text-xl max-sm:text-lg ${filterTeachers === 'children' ? 'bg-transparent text-gray-800 border-green-700 border-2' : 'text-white'}`} id='buttonFilterRight'>
                     Викладачі підлітків і дорослих
                 </Button>
             </div>
@@ -156,7 +156,7 @@ const Teachers = () => {
                 <p>Завантаження</p>
             )}
             <a href='https://www.canva.com/design/DAF9U9wkJS4/9f4E620yZL896dmZK0WsUg/view' target='_blanc'>
-                <Button className='text-white text-xl absolute z-10 left-[40vw] min-w-[20vw] max-md:min-w-[60vw] max-md:left-[20vw]'>Вільні години</Button>
+                <Button className='text-white text-xl absolute z-10 left-[40vw] min-w-[20vw] max-md:min-w-[60vw] max-md:left-[20vw] py-2'>Вільні години</Button>
             </a>
             {selectedImage && (
                 <ImageViewer imageUrl={selectedImage} onClose={closeImage} />

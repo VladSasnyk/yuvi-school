@@ -73,7 +73,7 @@ const Home = () => {
             </div>
 
             <a href='https://docs.google.com/forms/d/e/1FAIpQLScooAMec1PH5Mpy8JkcoEPXB9SdEEs1fwnjmxkZ36ln4l23YA/viewform' target='_blanc'>
-                <Button className='text-white max-sm:w-full w-2/3 max-sm:text-base text-xl buttonHome'>ЗАПИС НА БЕЗКОШТОВНЕ ПРОБНЕ ЗАНЯТТЯ</Button>
+                <Button className='text-white max-sm:w-full w-2/3 max-sm:text-base text-xl buttonHome py-4'>ЗАПИС НА БЕЗКОШТОВНЕ ПРОБНЕ ЗАНЯТТЯ</Button>
             </a>
             {window.screen.width > 860 && (
                 <>

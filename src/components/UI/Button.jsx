@@ -11,7 +11,7 @@ const Button = props => {
     return <button type="button"
         onClick={props.onClick}
         id={props.id}
-        className={`bg-[#3F7B5B] rounded-[50px] px-4 py-4 shadox-xl hover:bg-[#368a5d] ${props.className}`}>
+        className={`bg-[#3F7B5B] rounded-[50px] px-4 shadox-xl hover:bg-[#368a5d] ${props.className}`}>
         {props.children}
     </button>
 }
