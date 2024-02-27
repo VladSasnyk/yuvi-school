@@ -28,22 +28,6 @@ const PriceInfo = props => {
 
             {modalIsOpen && <Modal onClose={closeModal}>
                 <div className='flex flex-col gap-6 items-center justify-center p-6 max-sm:p-1' id='priceInfo'>
-                    {/* <div className="text-center">
-                        <h3 className="text-3xl border-b-2 pb-2 max-sm:text-2xl max-[375px]:text-xl">Індивідуальні і парні заняття:</h3>
-                        <p className="p-6 text-xl max-sm:text-lg max-sm:p-2 max-[375px]:p-0">
-                            Оплату можна здійснювати за такими пакетами: 2/4/8.
-                            Ви обираєте чи оплачуєте відразу 2 уроки наперед, чи більше.
-                            Такий формат занять можна переносити і скасовувати, детальніше ознайомтесь у правилах школи.
-                        </p>
-                    </div>
-                    <div className="text-center">
-                        <h3 className='text-3xl border-b-2 pb-2 max-sm:text-2xl max-[375px]:text-xl'>Групові заняття:</h3>
-                        <p className="p-6 text-xl max-sm:text-lg max-sm:p-6 max-[375px]:p-0">
-                            Оплата за 4 або 8 уроків наперед. Проте перше заняття у групі можна сплатити окремо!
-                            Якщо ви не можете відвідати урок, попередьте викладача і ми спробуємо перенести заняття,
-                            або ж оплата стягуватиметься, але всі матеріали вам будуть надані.
-                        </p>
-                    </div> */}
                     <div className="text-xl flex flex-col gap-4 max-sm:text-sm">
                         <p>
                             Перший урок оплачується окремо перед заняттям. Якщо вам сподобалось навчання, то надалі оплата відбувається пакетами.

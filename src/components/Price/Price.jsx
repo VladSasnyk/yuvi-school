@@ -7,14 +7,14 @@ import PriceItem from "./PriceItem";
 import PriceInfo from "./PriceInfo";
 import Li from "../UI/Li";
 
-import { Navigation, Pagination, A11y } from 'swiper/modules';
+// import { Navigation, Pagination, A11y } from 'swiper/modules';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+// import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+// // Import Swiper styles
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
 
 const Price = () => {
     const [ref, inView] = useInView({
@@ -49,9 +49,9 @@ const Price = () => {
 
 
     return <section ref={ref} id='price' className="opacity-0">
-        <div className="wrapper h-auto gap-12 max-sm:w-screen">
+        <div className="wrapper h-auto gap-12 max-sm:w-screen p-0">
             <Title id="priceTitle">ЦІНИ</Title>
-            <Swiper
+            {/* <Swiper
                 className="w-full h-full pb-10"
                 modules={[Navigation, Pagination, A11y]}
                 spaceBetween={50}
@@ -60,73 +60,81 @@ const Price = () => {
                 pagination={{ clickable: true }}
                 autoHeight
 
-            >
-                <SwiperSlide>
-                    <PriceItem title='ІНДИВІДУАЛЬНИЙ ФОРМАТ' price='350 ГРН/ГОД'>
+            > */}
+            <div className="flex gap-8 h-max max-[1200px]:flex-col">
+                {/* <SwiperSlide> */}
+                <PriceItem title='ІНДИВІДУАЛЬНИЙ ФОРМАТ' price1='400 ГРН/ГОД' price2='350 ГРН/ГОД'>
 
-                        <Li title='особистий підхід:'>
-                            вчителю доступні ваші потреби та рівень,
+                    <Li title='4/8/12 занять на тиждень'/>
+                    <Li title='персоналізація'>
+                        {/* вчителю доступні ваші потреби та рівень,
                             тому він може планувати заняття з
                             урахуванням вашого темпу та стилю
-                            навчання.
-                        </Li>
-                        <Li title='максимальна увага:'>
-                            ви отримуєте повну увагу вчителя, що
-                            сприяє кращому засвоєнню матеріалу.
-                        </Li>
-                        <Li title='гнучкий графік:'>
-                            ви маєте можливість обирати зручний для
+                            навчання. */}
+                    </Li>
+                    <Li title='гнучкий графік'>
+                        {/* ви маєте можливість обирати зручний для
                             вас графік навчання та за потреби
                             переносити уроки.
 
                             це ідеальний варіант для людей з складним
-                            графіком.
-                        </Li>
-                    </PriceItem>
-                </SwiperSlide>
-                <SwiperSlide><PriceItem title='ГРУПОВИЙ ФОРМАТ' price='220 ГРН/70ХВ'>
+                            графіком. */}
+                    </Li>
+                    <Li title='максимальна увага'>
+                        {/* ви отримуєте повну увагу вчителя, що
+                            сприяє кращому засвоєнню матеріалу. */}
+                    </Li>
+
+                </PriceItem>
+                {/* </SwiperSlide> */}
+                {/* <SwiperSlide> */}
+                <PriceItem title='ГРУПОВИЙ ФОРМАТ' price1='230 ГРН/ГОД' price2='190 ГРН/ГОД'>
                     <Li title='маленькі групи з 3-5 учнів.'></Li>
                     <Li title='8 занять на місяць.'></Li>
-                    <Li title='інтенсивна практика говоріння:'>
-                        у групі є більше можливостей для вправ у
+                    <Li title='інтенсивна практика говоріння'>
+                        {/* у групі є більше можливостей для вправ у
                         мовленні, так як кожен учасник має
                         можливість висловити свою думку та
-                        прийняти участь в діалозі.
+                        прийняти участь в діалозі. */}
                     </Li>
-                    <Li title='обмін новими словами та виразами:'>
+                    {/* <Li title='обмін новими словами та виразами:'>
                         учасники можуть ділитися новими словами,
                         виразами та фразами, які вони вивчили, що
                         розширює лексичний запас всієї групи.
-                    </Li>
+                    </Li> */}
                     <Li title='заохочення та підтримка:'>
-                        можливість отримувати підтримку від інших
+                        {/* можливість отримувати підтримку від інших
                         учасників групи, що допомагає зберігати
-                        мотивацію та стимулює досягнення цілей.
+                        мотивацію та стимулює досягнення цілей. */}
                     </Li>
                     <Li title='доступна ціна:'>
-                        отримуєте ту саму кількість занять, але за
-                        вигіднішою ціною
+                        {/* отримуєте ту саму кількість занять, але за
+                        вигіднішою ціною */}
                     </Li>
                 </PriceItem>
-                </SwiperSlide>
-                <SwiperSlide><PriceItem title='ПАРНИЙ ФОРМАТ' price='290 ГРН/ГОД'>
+                {/* </SwiperSlide> */}
+                {/* <SwiperSlide> */}
+                <PriceItem title='ПАРНИЙ ФОРМАТ' price1='330 ГРН/ГОД' price2='280 ГРН/ГОД'>
                     <Li title='8 занять на місяць'></Li>
                     <Li title='взаємне заохочення:'>
-                        партнер може стати великим джерелом
+                        {/* партнер може стати великим джерелом
                         підтримки та стимулювати вас до досягнення
-                        більших успіхів.
+                        більших успіхів. */}
                     </Li>
                     <Li title='мотивація:'>
-                        наявність партнера спонукає до регулярних
-                        занять та підтримує мотивацію.
+                        {/* наявність партнера спонукає до регулярних
+                        занять та підтримує мотивацію. */}
                     </Li>
                     <Li title='вчитесь один в одного:'>
-                        можливість обмінюватися знаннями та
-                        допомагати одне одному в процесі вивчення.
+                        {/* можливість обмінюватися знаннями та
+                        допомагати одне одному в процесі вивчення. */}
                     </Li>
-                </PriceItem></SwiperSlide>
+                </PriceItem>
+                {/* </SwiperSlide> */}
 
-            </Swiper>
+                {/* </Swiper> */}
+            </div>
+
 
 
             <PriceInfo id='priceInfo' />

@@ -12,13 +12,13 @@
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat Regular'), local('Montserrat-Regular'),
-       url('/fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+    url('/fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Montserrat Bold';
   src: local('Montserrat Bold'), local('Montserrat-Bold'),
-       url('/fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+    url('/fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
 }
 
 
@@ -172,4 +172,11 @@ header .list-item a.active {
 
 #reviewSection {
   transform: rotateY(180deg);
+}
+
+#price {
+
+
+  white-space: nowrap;
+  overflow: hidden;
 }
