@@ -32,7 +32,7 @@ const Lessons = () => {
     }, [inView]);
 
 
-    return <section id='lessons' className='min-h-[60vh] opacity-0' ref={ref}>
+    return <section id='lessons' className='min-h-[60vh] opacity-0 max-sm:mt-14' ref={ref}>
         <div className='wrapper'>
             <Title id='lessonsTitle'>ЗАНЯТТЯ</Title>
             <div className='w-full flex items-center justify-center py-14'>
