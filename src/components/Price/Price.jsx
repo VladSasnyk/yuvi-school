@@ -63,7 +63,7 @@ const Price = () => {
             > */}
             <div className="flex gap-8 h-max max-[1200px]:flex-col">
                 {/* <SwiperSlide> */}
-                <PriceItem title='ІНДИВІДУАЛЬНИЙ ФОРМАТ' price1='400 ГРН/ГОД' price2='350 ГРН/ГОД'>
+                <PriceItem title='ІНДИВІДУАЛЬНИЙ ФОРМАТ' price1='480 ГРН/ГОД' price2='420 ГРН/ГОД'>
 
                     <Li title='4/8/12 занять на тиждень'/>
                     <Li title='персоналізація'>
@@ -88,7 +88,7 @@ const Price = () => {
                 </PriceItem>
                 {/* </SwiperSlide> */}
                 {/* <SwiperSlide> */}
-                <PriceItem title='ГРУПОВИЙ ФОРМАТ' price1='230 ГРН/ГОД' price2='190 ГРН/ГОД'>
+                <PriceItem title='ГРУПОВИЙ ФОРМАТ' price1='250 ГРН/ГОД' price2='200 ГРН/ГОД'>
                     <Li title='маленькі групи з 3-5 учнів'></Li>
                     <Li title='8 занять на місяць'></Li>
                     <Li title='інтенсивна практика говоріння'>
@@ -114,7 +114,7 @@ const Price = () => {
                 </PriceItem>
                 {/* </SwiperSlide> */}
                 {/* <SwiperSlide> */}
-                <PriceItem title='ПАРНИЙ ФОРМАТ' price1='330 ГРН/ГОД' price2='280 ГРН/ГОД'>
+                <PriceItem title='ПАРНИЙ ФОРМАТ' price1='350 ГРН/ГОД' price2='300 ГРН/ГОД'>
                     <Li title='8 занять на місяць'></Li>
                     <Li title='взаємне заохочення'>
                         {/* партнер може стати великим джерелом
