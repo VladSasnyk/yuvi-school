@@ -7,7 +7,7 @@ const PriceItem = props => {
     return (
         <div className="min-w-max h-full flex items-center flex-col m-auto justify-around py-4 max-[1400px]:w-[65%]
         border-black border-4 shadow-xl rounded-3xl
-        gap-8 max-sm:gap-2 px-4 max-[1100px]:w-full priceItem
+        gap-8 max-sm:gap-2 px-4 max-[1100px]:w-[50vw] priceItem max-[600px]:w-[85vw]
         bg-[#F1F1F0] pb-10">
             <h2 className="text-2xl font-bold max-sm:text-lg">{props.title}</h2>
             <ul className='max-sm:p-2 flex flex-col gap-4 max-sm:gap-1 self-start'>

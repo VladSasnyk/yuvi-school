@@ -44,11 +44,17 @@ const Price = () => {
             }
         };
     }, [inView]);
+    useEffect(() => {
+        setTimeout(() => {
+            gsap.to('#price', { display: 'flex' });
+        },10)
+
+    }, [])
 
 
 
 
-    return <section ref={ref} id='price' className="opacity-0">
+    return <section ref={ref} id='price' className="opacity-0 hidden">
         <div className="wrapper h-auto gap-12 max-sm:w-screen p-0">
             <Title id="priceTitle">ЦІНИ</Title>
             {/* <Swiper
@@ -65,7 +71,7 @@ const Price = () => {
                 {/* <SwiperSlide> */}
                 <PriceItem title='ІНДИВІДУАЛЬНИЙ ФОРМАТ' price1='480 ГРН/ГОД' price2='420 ГРН/ГОД'>
 
-                    <Li title='4/8/12 занять на тиждень'/>
+                    <Li title='4/8/12 занять на тиждень' />
                     <Li title='персоналізація'>
                         {/* вчителю доступні ваші потреби та рівень,
                             тому він може планувати заняття з
