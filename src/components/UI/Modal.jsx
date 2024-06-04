@@ -9,8 +9,8 @@ const Backdrop = (props) => {
 
 const ModalOverlay = (props) => {
     return <div className="h-auto fixed top-[11vh] left-[20%] w-[60%] bg-[#E2E1DD] p-6 text-black rounded-xl shadow-md z-30 slide-down max-sm:top-[5vh] max-[391px]:top-0 max-lg:w-[90%] max-lg:left-[5%]">
-        <IoCloseCircle onClick={props.onClose} className='absolute right-[3%] text-5xl text-green-700 top-[8%] cursor-pointer max-lg:right-[5%] max-lg:top-[5%] max-sm:hidden' />
-        <div className='border-green-700 border-2 rounded-xl'>
+        <IoCloseCircle onClick={props.onClose} className='absolute right-[3%] text-5xl text-[#c14649] top-[8%] cursor-pointer max-lg:right-[5%] max-lg:top-[5%] max-sm:hidden' />
+        <div className='border-[#c14649] border-2 rounded-xl'>
             {props.children}
         </div>
     </div>

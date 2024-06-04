@@ -14,7 +14,7 @@ const Nav = () => {
 
     elements.forEach((element) => {
       element.addEventListener('mouseover', () => {
-        gsap.to(elements, { opacity: 0.5, duration: 0.2 });
+        gsap.to(elements, { opacity: 0.3, duration: 0.2 });
         gsap.to(element, { opacity: 1, duration: 0.2 });
       });
 

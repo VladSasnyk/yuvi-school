@@ -16,11 +16,11 @@ const PriceItem = props => {
             <div className="flex w-full gap-20 max-md:flex-col max-[1400px]:gap-6 max-sm:gap-2">
                 <div className="w-1/2 text-center gap-4 flex flex-col max-md:w-full">
                     <h3 className="font-bold text-lg max-md:text-base">дорослі</h3>
-                    <Button className='self-center text-xl font-[600] text-white self-end max-md:w-[75%] max-sm:text-base py-2'>{props.price1}</Button>
+                    <Button className='self-center text-xl font-[600] text-[#c14649] self-end max-md:w-[75%] max-sm:text-base py-2'>{props.price1}</Button>
                 </div>
                 <div className="w-1/2 text-center gap-4 flex flex-col max-md:w-full">
                     <h3 className="font-bold text-lg max-md:text-base">діти</h3>
-                    <Button className='self-center text-xl font-[600] text-white self-end max-md:w-[75%] max-sm:text-base py-2'>{props.price2}</Button>
+                    <Button className='self-center text-xl font-[600] text-[#c14649] self-end max-md:w-[75%] max-sm:text-base py-2'>{props.price2}</Button>
                 </div>
 
             </div>

@@ -21,7 +21,7 @@ const Header = () => {
   }, [handleScroll]);
 
   return (
-    <header className={`flex justify-around h-20 items-center shadow-md font-semibold mb-4 text-base w-full top-0 left-0 z-10 background fixed transition-transform duration-500 ease-in-out ${visible ? 'transform translate-y-0' : 'transform -translate-y-20'}`}>
+    <header className={`flex text-white justify-around h-20 items-center bg-[#c14649] shadow-md font-semibold mb-4 text-base w-full top-0 left-0 z-10 fixed transition-transform duration-500 ease-in-out ${visible ? 'transform translate-y-0' : 'transform -translate-y-20'}`}>
       <Link to='home' smooth={true} duration={1200} href='#home'>
         <img
           src={logo}
@@ -32,7 +32,7 @@ const Header = () => {
       <Nav />
       <a href='https://docs.google.com/forms/d/e/1FAIpQLScooAMec1PH5Mpy8JkcoEPXB9SdEEs1fwnjmxkZ36ln4l23YA/viewform' target='_blank' rel="noopener noreferrer">
         <Button
-          className='text-white w-1/7 text-base max-sm:text-xs max-[281px]:text-xs max-[281px]:p-2 py-4'
+          className='text-[#c14649] w-1/7 text-base max-sm:text-xs max-[281px]:text-xs max-[281px]:p-2 py-4'
         >
           ЗАПИС НА НАВЧАННЯ
         </Button>

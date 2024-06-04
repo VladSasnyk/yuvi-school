@@ -11,7 +11,7 @@ const NavItem = ({ to, onClick, children ,href}) => {
                 spy={true}
                 smooth={true}
                 duration={1200}
-                className="p-2 transition duration-500 ease-in-out hover:border-b-2 hover:border-green-700 hover:text-green-700 max-lg:border-b-2 max-lg:border-green-700"
+                className="p-2 transition duration-500 ease-in-out hover:border-b-2 hover:border-[#fcd3e1] hover:text-[#fcd3e1] max-lg:border-b-2 max-lg:border-green-700"
                 onClick={onClick}
             >
                 {children}

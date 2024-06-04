@@ -6,7 +6,7 @@ const Li = ({ children, title }) => {
         <li className="flex items-start" >
             <GiCheckMark className="w-[10%] mt-2"/>
             <div className="w-[90%] flex flex-col gap-2">
-                <h3 className="text-[#3F7B5B] font-bold text-xl max-sm:text-base">{title}</h3>
+                <h3 className="text-[#c14649] font-bold text-xl max-sm:text-base">{title}</h3>
                 <p className="font-[400] text-xl text-[rgb(52, 53, 57)] max-sm:text-sm">{children}</p>
             </div>
         </li>
