@@ -51,7 +51,7 @@ const Home = () => {
     return <section ref={ref} id='home' className='max-sm:h-auto max-sm:pt-20 relative opacity-0 max-w-[99.9%]'>
         <div className="homeSection wrapper gap-24 h-full text-center max-md:gap-12">
             <h1 className="max-sm:text-5xl max-[1040px]:text-7xl text-7xl text-center">
-                Yuvi schoool
+                Yuvi school
             </h1>
             <div className='w-[50%] flex flex-col justfiy-center items-center gap-10 max-[1400px]:w-[70%] max-[1060px]:w-full'>
                 <div id='leftHomeDiv' className='flex text-xl w-full gap-4 justify-end max-sm:text-base'>
