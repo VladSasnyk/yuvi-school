@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from 'react';
-import logo from '../../assets/logo.webp';
 import Button from '../UI/Button';
 import Nav from './Nav';
 import { Link } from 'react-scroll';
@@ -24,9 +23,10 @@ const Header = () => {
     <header className={`flex text-white justify-around h-20 items-center bg-[#c14649] shadow-md font-semibold mb-4 text-base w-full top-0 left-0 z-10 fixed transition-transform duration-500 ease-in-out ${visible ? 'transform translate-y-0' : 'transform -translate-y-20'}`}>
       <Link to='home' smooth={true} duration={1200} href='#home'>
         <img
-          src={logo}
+          src='/logo.png'
           alt="logoHeader"
-          className="max-[900px]:scale-75 h-12 pt-3 hover:cursor-pointer transform hover:scale-110 transition-transform duration-300 ease-in-out"
+          className='w-[120px]'
+          // className="max-[900px]:scale-75 h-12 pt-3 hover:cursor-pointer transform hover:scale-110 transition-transform duration-300 ease-in-out"
         />
       </Link>
       <Nav />

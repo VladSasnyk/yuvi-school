@@ -1,5 +1,4 @@
 import { Link } from 'react-scroll';
-import planet from '../../assets/logo.webp';
 import { BsInstagram } from "react-icons/bs";
 import { BsTelegram } from "react-icons/bs";
 import { FaViber } from "react-icons/fa";
@@ -7,14 +6,14 @@ import { FaViber } from "react-icons/fa";
 const Footer = () => {
     return (
         <footer className="w-full bg-[#c14649]/50 mt-[10%] flex items-center text-white justify-around text-xl max-md:flex-col max-sm:text-lg">
-            <div className='py-20 text-center max-sm:py-10'>
+            <div className='text-center'>
                 <Link className="cursor-pointer text-center"
                     to='home'
                     href='#home'
                     spy={true}
                     smooth={true}
                     duration={1200}>
-                    <img src={planet} alt="planetImg" className='w-[12vw] max-md:w-[70%] m-auto max-sm:w-[40%]' />
+                    <img src='/logo.png' alt="planetImg" className='w-[12vw] max-md:w-[70%] m-auto max-sm:w-[40%]' />
                 </Link>
                
             </div>

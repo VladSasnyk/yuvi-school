@@ -32,7 +32,7 @@ const Nav = () => {
       {/* Desktop */}
       <nav
         className={`max-lg:absolute max-lg:top-20  max-lg:pt-10 max-lg:w-full max-lg:text-center max-lg:h-auto
-    max-lg:bg-transparent max-lg:backdrop-blur-xl max-lg:pb-10 max-lg:z-50 max-lg:transition transition-transform transform ${isOpen ? 'max-lg:translate-x-0' : 'max-lg:-translate-x-full'
+    max-lg:bg-[#fcd3e1]  max-lg:pb-10 max-lg:z-50 max-lg:transition transition-transform transform ${isOpen ? 'max-lg:translate-x-0' : 'max-lg:-translate-x-full'
           }`}
       >
         <ul className="navItems flex gap-10 max-lg:flex-col max-lg:gap-10 max-xl:gap-1 ">
@@ -59,7 +59,7 @@ const Nav = () => {
         <button className="text-white focus:outline-none" onClick={toggleMobileMenu}>
           {isOpen ? (
             <svg
-              className="w-8 h-8 text-[#3F7B5B]"
+              className="w-8 h-8 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -69,7 +69,7 @@ const Nav = () => {
             </svg>
           ) : (
             <svg
-              className="w-8 h-8 text-[#3F7B5B]"
+              className="w-8 h-8 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
